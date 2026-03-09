@@ -1,0 +1,9 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1773081361
+icon.svg::CompressedTexture2D::7968722327326947584::1773060825::1773060840::1::::<><><>0<>0<>210089327f94e007310510a00a1af6d5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+game.tscn::PackedScene::5888374998261582940::1773080931::0::1::::<><><>0<>0<><>::uid://cwhynfj3cxrhg::::res://ball.gd<>uid://cxjiiy677wi34::::res://sprites/ball.png<>uid://dcq8o1g6mcx4t::::res://sprites/floor.png
+ball.gd::GDScript::6332927272644270672::1773081361::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://sprites/::1773081810
+ball.png::CompressedTexture2D::6406265503087767397::1773062533::1773062534::1::::<><><>0<>0<>0dc2db3f20f16ea578fe55890de2d5fb<>res://.godot/imported/ball.png-dbfca04ee0bd630c71df985dd5b09bcc.ctex::
+floor.png::CompressedTexture2D::7334699820596856825::1773063489::1773063490::1::::<><><>0<>0<>f24490f17f853190cbbb019678d2ae25<>res://.godot/imported/floor.png-8870646e23ec8c3ad77089faabc9e773.ctex::
+star.png::CompressedTexture2D::5620254128591733975::1773081810::1773081810::1::::<><><>0<>0<>4be3f51c044842f06f24ee23e2324d0d<>res://.godot/imported/star.png-b168e13ae1f9d03011573f475e49f2fb.ctex::

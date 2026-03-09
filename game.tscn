@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cp5mw8mk6ahaq"]
+
+[ext_resource type="Script" uid="uid://cwhynfj3cxrhg" path="res://ball.gd" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://cg418mpquegyq" path="res://game.gd" id="1_ryrav"]
+[ext_resource type="Texture2D" uid="uid://cxjiiy677wi34" path="res://sprites/ball.png" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://dcq8o1g6mcx4t" path="res://sprites/floor.png" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://rlphpv7wm52r" path="res://star.gd" id="4_7jktm"]
+[ext_resource type="Texture2D" uid="uid://cmcq08u0e7fkp" path="res://sprites/star.png" id="5_ryrav"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fc0e3"]
+radius = 63.15061
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
+size = Vector2(1278, 129.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eow3j"]
+radius = 20.024984
+
+[node name="Game" type="Node2D" unique_id=1995502021]
+script = ExtResource("1_ryrav")
+
+[node name="Ball" type="CharacterBody2D" parent="." unique_id=1822478534]
+position = Vector2(592, 234)
+script = ExtResource("1_e2o6t")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=2056916535]
+position = Vector2(-41, -166)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e2o6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1934002613]
+position = Vector2(-40, -167)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_fc0e3")
+debug_color = Color(0.8088083, 0.40621147, 0.21446604, 0.41960785)
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1572618990]
+position = Vector2(400, 560)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=2027265510]
+position = Vector2(157, 57.999977)
+texture = ExtResource("3_feb5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=2046615173]
+position = Vector2(160, -5.25)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Star" type="Area2D" parent="." unique_id=974263236]
+script = ExtResource("4_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Star" unique_id=354877124]
+position = Vector2(94.99994, 114.99994)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_ryrav")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Star" unique_id=33860798]
+position = Vector2(94, 116)
+shape = SubResource("CircleShape2D_eow3j")
+debug_color = Color(0.5763058, 0.5539114, 7.70092e-07, 0.41960785)
+
+[node name="Score" type="Label" parent="." unique_id=999431205]
+custom_minimum_size = Vector2(1, 1)
+offset_left = 1105.0
+offset_top = 5.0
+offset_right = 1145.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 2
+
+[connection signal="body_entered" from="Star" to="Star" method="_on_body_entered"]
