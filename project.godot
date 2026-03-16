@@ -15,6 +15,11 @@ run/main_scene="uid://cp5mw8mk6ahaq"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=650
+
 [input]
 
 esquerda={

@@ -8,6 +8,7 @@ func _on_body_entered(body):
 # (por exemplo, a bola) entra na área da estrela.
 
 	if body.name == "Ball":
+		print("Tocou na estrela")
 		# Verifica se o objeto que entrou na área é a bola.
 		# Isso evita que outros objetos ativem a estrela.
 		get_parent().add_score()

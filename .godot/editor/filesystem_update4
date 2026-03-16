@@ -1,4 +1,4 @@
 res://game.tscn
-res://ball.gd
-res://star.gd
+res://bomb.gd
 res://game.gd
+res://star.gd
